@@ -29,17 +29,21 @@ app.use("/category",categoryRouter)
 
 
 
-app.get("/", (req, res) => {
-  res.send({ message: "server online" });
+// app.get("/", (req, res) => {
+//   res.send({ message: "server online" });
+// });
+
+
+app.use(express.static(path.join(__dirname, '../client/build')));
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
+
 app.listen(port, () => {});
 console.log(`listening to port ${port}`);
 
 
-app.use(express.static(path.join(__dirname, 'client')));
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'client', 'app.js'));
-});
 
-app.listen(9000)
+
