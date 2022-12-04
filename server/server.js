@@ -36,7 +36,7 @@ app.listen(port, () => {});
 console.log(`listening to port ${port}`);
 
 
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'client')));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'client', 'app.js'));
