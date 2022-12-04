@@ -4,6 +4,8 @@ const db = require("./db");
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const path = require('path');
+
 const ordersRouter=require("./routes/ordersRouter")
 const productsRouter=require("./routes/productsRouter")
 const storesRouter=require("./routes/storeRouter")
@@ -32,3 +34,12 @@ app.get("/", (req, res) => {
 });
 app.listen(port, () => {});
 console.log(`listening to port ${port}`);
+
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+app.listen(9000)
