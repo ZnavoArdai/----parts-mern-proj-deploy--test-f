@@ -1,7 +1,7 @@
 
 export const getStores =async () => {
  
-    const respo=await fetch("http://localhost:8080/stores");
+    const respo=await fetch("https://znavo-test-b.onrender.com/stores");
 
     const stores=await respo.json()
     return stores

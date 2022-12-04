@@ -1,7 +1,7 @@
 
 export const getInfo =async () => {
  
-    const respo= await fetch("http://localhost:8080/info");
+    const respo= await fetch("https://znavo-test-b.onrender.com/info");
 
     const info= await respo.json();
     return info;

@@ -1,7 +1,7 @@
 
 export const getProudcts=async()=>{
 
-   const respo=await fetch("http://localhost:8080/products");
+   const respo=await fetch("https://znavo-test-b.onrender.com/products");
 
 
    const products=await respo.json()

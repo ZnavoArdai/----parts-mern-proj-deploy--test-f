@@ -1,7 +1,7 @@
 
 export const getCategory = async() => {
  
-    const respo=await fetch("http://localhost:8080/category");
+    const respo=await fetch("https://znavo-test-b.onrender.com/category");
 
     const category=await respo.json();
     return category;
