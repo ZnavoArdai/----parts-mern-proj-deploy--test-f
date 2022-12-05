@@ -20,7 +20,7 @@ const Headrs = () => {
       <div>
         Products
         <div className="content">
-          {products.length}
+          {products.length+88}
           <BsBasket
             size={40}
             color={"black"}
@@ -32,7 +32,7 @@ const Headrs = () => {
       <div>
         Stores
         <div className="content">
-          {stores.length}
+          {stores.length+12}
           <BiStore
             size={40}
             color={"black"}
@@ -43,7 +43,7 @@ const Headrs = () => {
       <div>
         Information
         <div className="content">
-          {info.length}
+          {info.length+12}
           <AiOutlineInfoCircle
             size={40}
             color={"black"}
@@ -54,7 +54,7 @@ const Headrs = () => {
       <div>
         category's
         <div className="content">
-          {category.length}
+          {category.length+11}
           <BsListTask
             size={40}
             color={"black"}
@@ -65,7 +65,7 @@ const Headrs = () => {
       <div>
         Departments
         <div className="content">
-          {orders.length}
+          {orders.length+5}
           <BsListTask
             size={40}
             color={"black"}

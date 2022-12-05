@@ -12,7 +12,7 @@ function NavBar() {
       className="text-dark  d-flex justify-content-between"
     >
         <Navbar.Brand className="acc w-25  ">
-          <Image src="logo192.png" width={60} />
+          <Image src="ss.png" width={60} />
         </Navbar.Brand>
         <Nav>
 

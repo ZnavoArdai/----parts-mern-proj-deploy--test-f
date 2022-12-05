@@ -17,11 +17,36 @@ function SideBar() {
       </Button>
       <Offcanvas  show={show} onHide={handleClose} placement="end">
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+
+          <Offcanvas.Title >Hello</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          <div className='list'>
+
+          
+          <a>DASHBOARD</a>
+          <a>STATISTIC</a>
+          <a>CATEGORY</a>
+          <a>DEPARTMENTS</a>
+          <a>STORES</a>
+          <a>ADMIN USERS</a>
+          <a>USERS</a>
+          <a>PRODUCTS</a>
+          <a>SALES</a>
+          <a>ORDERS</a>
+          <a>INFORMATION</a>
+          <a>SETTINGS</a>
+          </div>
+
+
+
+
+
+
+
+
+
+
         </Offcanvas.Body>
       </Offcanvas>
     </>
