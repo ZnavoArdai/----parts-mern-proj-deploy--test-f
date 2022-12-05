@@ -13,6 +13,7 @@ const DataProvider = ({ children }) => {
   const [category, setCategory] = useState([]);
   const [info, setInfo] = useState([]);
   const [stores, setStores] = useState([]);
+  const [userData,setUserData]=useState({})
 
 
 
@@ -26,7 +27,7 @@ const DataProvider = ({ children }) => {
  
 
   return (
-    <dataContext.Provider value={{ orders,products,info,category,stores }}>{children}</dataContext.Provider>
+    <dataContext.Provider value={{ orders,products,info,category,stores,userData,setUserData }}>{children}</dataContext.Provider>
   );
 };
 

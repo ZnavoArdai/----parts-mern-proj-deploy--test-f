@@ -1,25 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useContext } from "react";
 
 import "./App.css";
-import Headrs from "./components/features/Header/Headrs";
-import NavBar from "./components/features/navbar/NaveBar";
-import BarChart from "./components/pages/lineChart/LineChart";
-import TableAndCircles from "./components/pages/tableAndCircles/TableAndCircles";
-import DataProvider from "./context/dataContext";
+import { Login } from "./components/features/login/Login";
+
+import Home from "./components/pages/Home/Home";
+import { dataContext } from "./context/dataContext";
 
 function App() {
-  return (
-    <div className="App">
+  const { userData } = useContext(dataContext);
+  console.log(userData)
 
-      <DataProvider>
-      <NavBar />
-      <Headrs/>
-      <BarChart/>
-      <TableAndCircles/>
-      </DataProvider>
-   
-    </div>
-  );
+  return <div className="App">{userData.email?(<Home /> ):( <Login />)}</div>;
 }
 
 export default App;
