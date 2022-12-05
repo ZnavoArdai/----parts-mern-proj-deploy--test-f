@@ -63,4 +63,14 @@ text-align: center;
     .two>.inside{
         height: 20vh;
      }
+     .inside>.circle{
+
+        width: 150px;
+        height: 150px;
+      
+      
+    }
+    .one ,.two{
+        font-size: 15px !important;
+    }
 }

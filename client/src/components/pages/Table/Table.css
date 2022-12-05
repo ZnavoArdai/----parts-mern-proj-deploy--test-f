@@ -9,7 +9,7 @@ table>tbody>tr:nth-child(even){
 }
 @media screen and (max-width:765px) {
     table{
-        font-size: 13px;
+        font-size: 12px;
     } 
    
 }
