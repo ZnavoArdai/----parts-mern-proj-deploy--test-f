@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { GiHamburgerMenu } from "react-icons/gi";
+import { dataContext } from '../../../context/dataContext';
 
 
 function SideBar() {
@@ -9,6 +10,7 @@ function SideBar() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const {userData}=useContext(dataContext)
 
   return (
     <>
@@ -18,7 +20,7 @@ function SideBar() {
       <Offcanvas  show={show} onHide={handleClose} placement="end">
         <Offcanvas.Header closeButton>
 
-          <Offcanvas.Title >Hello</Offcanvas.Title>
+          <Offcanvas.Title >Hello {" "+ userData.name}</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <div className='list'>
