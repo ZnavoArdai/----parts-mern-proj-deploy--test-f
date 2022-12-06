@@ -32,6 +32,10 @@ function LoginFrom() {
           const userLog= await user.json()
           console.log(userLog)
           setUserData(userLog)
+
+          
+            localStorage.setItem("token",userData._id)
+        
     }
   return (
     <Form onSubmit={(e)=>submitForm(e)}>
