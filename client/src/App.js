@@ -7,15 +7,13 @@ import { Login } from "./components/features/login/Login";
 import Home from "./components/pages/Home/Home";
 import { dataContext } from "./context/dataContext";
 
-
 function App() {
   const { userData } = useContext(dataContext);
 
-  const token=localStorage.get("token")
- 
+
   console.log(userData)
 
-  return <div className="App">{token?(<Home /> ):( <Login />)}</div>;
+  return <div className="App">{userData.email?(<Home /> ):( <Login />)}</div>;
 }
 
 export default App;

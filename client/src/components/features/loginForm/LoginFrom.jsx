@@ -34,7 +34,7 @@ function LoginFrom() {
           setUserData(userLog)
 
           
-            localStorage.setItem("token",userData._id)
+       localStorage.setItem("token",userData._id)
         
     }
   return (
