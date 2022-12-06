@@ -9,6 +9,10 @@ import { dataContext } from "./context/dataContext";
 
 function App() {
   const { userData } = useContext(dataContext);
+
+  if(userData){
+    localStorage.setItem("token",userData._id)
+  }
   console.log(userData)
 
   return <div className="App">{userData.email?(<Home /> ):( <Login />)}</div>;
