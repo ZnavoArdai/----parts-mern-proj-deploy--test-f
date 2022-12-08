@@ -33,7 +33,6 @@ function LoginFrom() {
           console.log(userLog)
           setUserData(userLog)
 
-         window.localStorage.set("Token",JSON.stringify(userLog.user._id))
     }
 
 
