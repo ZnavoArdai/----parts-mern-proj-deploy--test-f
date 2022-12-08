@@ -31,7 +31,6 @@ function LoginFrom() {
 
           const userLog= await user.json()
 
-          localStorage.setItem("token",userLog._id)
           
           console.log(userLog)
           setUserData(userLog)
