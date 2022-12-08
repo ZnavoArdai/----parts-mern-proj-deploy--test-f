@@ -39,7 +39,7 @@ function LoginFrom() {
 
     const setCookie=()=>{
     Cookie.set("Token",userData.token,{
-      expires:1000,
+      expires:1,
 
     })
     }
