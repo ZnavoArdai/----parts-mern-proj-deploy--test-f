@@ -32,16 +32,14 @@ function LoginFrom() {
           const userLog= await user.json()
           console.log(userLog)
           setUserData(userLog)
-          setCookie(userData.user._id)
-        
+          
+          Cookie.set("Token",JSON.stringify(userData.user._id) ,{
+            expires:1,
+          })
     }
 
 
-    const setCookie=(data)=>{
-    Cookie.set("Token",JSON.stringify(data) ,{
-      expires:1,
-    })
-    }
+   
     
   return (
     <Form onSubmit={(e)=>submitForm(e)}>
