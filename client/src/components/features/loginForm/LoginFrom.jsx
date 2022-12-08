@@ -33,9 +33,7 @@ function LoginFrom() {
           console.log(userLog)
           setUserData(userLog)
 
-          Cookie.set("Token",JSON.stringify(userLog.user._id) ,{
-            expires:1,
-          })
+          localStorage.set("Token",JSON.stringify(userLog.user._id))
     }
 
 
