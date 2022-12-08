@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { dataContext } from '../../../context/dataContext';
-
+import Cookie from "js-cookie"
 function LoginFrom() {
 
     const [formName,setFormName]=useState({name:"",email:"",password:""})
@@ -32,11 +32,18 @@ function LoginFrom() {
           const userLog= await user.json()
           console.log(userLog)
           setUserData(userLog)
-
-          
-       localStorage.setItem("token",userData._id)
+          setCookie()
         
     }
+
+
+    const setCookie=()=>{
+    Cookie.set("Token",useState.token,{
+      expires:1000,
+
+    })
+    }
+    
   return (
     <Form onSubmit={(e)=>submitForm(e)}>
 

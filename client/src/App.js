@@ -13,7 +13,7 @@ function App() {
 
   console.log(userData)
 
-  return <div className="App">{userData.email?(<Home /> ):( <Login />)}</div>;
+  return <div className="App">{userData.user.email?(<Home /> ):( <Login />)}</div>;
 }
 
 export default App;
