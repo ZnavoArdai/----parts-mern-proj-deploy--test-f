@@ -32,8 +32,8 @@ function LoginFrom() {
           const userLog= await user.json()
           console.log(userLog)
           setUserData(userLog)
-          
-          Cookie.set("Token",JSON.stringify(userData.user._id) ,{
+
+          Cookie.set("Token",JSON.stringify(userLog.user._id) ,{
             expires:1,
           })
     }
