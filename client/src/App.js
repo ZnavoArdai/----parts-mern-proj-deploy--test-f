@@ -10,16 +10,17 @@ import { dataContext } from "./context/dataContext";
 function App() {
   const { userData } = useContext(dataContext);
 
+  const myStorg = window.localStorage;
 
-  if(userData){
-    const myStorg=window.localStorage;
-    myStorg.setItem("token",userData._id)
+  if (userData._id) {
+    myStorg.setItem("token", userData._id);
   }
 
+  const userTokenEXIST = myStorg.getItem("token");
 
-  console.log(userData)
+  console.log(userData);
 
-  return <div className="App">{userData.email?(<Home /> ):( <Login />)}</div>;
+  return <div className="App">{userTokenEXIST ? <Home /> : <Login />}</div>;
 }
 
 export default App;
