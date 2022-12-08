@@ -37,7 +37,7 @@ function LoginFrom() {
     }
 
 
-    const setCookie=()=>{
+    const setCookie=(data)=>{
     Cookie.set("Token",JSON.stringify(data) ,{
       expires:1,
     })
