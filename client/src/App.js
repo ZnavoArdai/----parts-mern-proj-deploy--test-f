@@ -11,8 +11,11 @@ function App() {
   const { userData } = useContext(dataContext);
 
 
-  const myStorg=window.localStorage;
-  myStorg.setItem("token",userData._id)
+  if(userData){
+    const myStorg=window.localStorage;
+    myStorg.setItem("token",userData._id)
+  }
+
 
   console.log(userData)
 
