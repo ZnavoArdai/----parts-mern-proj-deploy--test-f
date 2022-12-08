@@ -10,11 +10,9 @@ import { dataContext } from "./context/dataContext";
 function App() {
   const { userData } = useContext(dataContext);
 
-  // useEffect(()=>{
 
-  // localStorage.setItem("token",userData._id)
-
-  // },[userData])
+  const myStorg=window.localStorage;
+  myStorg.setItem("token",userData._id)
 
   console.log(userData)
 
