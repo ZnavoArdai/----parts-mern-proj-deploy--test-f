@@ -12,6 +12,11 @@ function SideBar() {
   const handleShow = () => setShow(true);
   const {userData}=useContext(dataContext)
 
+  const logoUT=()=>{
+localStorage.removeItem("token")
+window.location.reload()
+  }
+
   return (
     <>
       <Button variant="primary" onClick={handleShow} className="me-2" style={{background:"#032B45" ,border:"none",fontSize:20}}>
@@ -20,7 +25,7 @@ function SideBar() {
       <Offcanvas  show={show} onHide={handleClose} placement="end">
         <Offcanvas.Header closeButton>
 
-          <Offcanvas.Title >Hello {" "+ userData.name}</Offcanvas.Title>
+          <Offcanvas.Title >Hello {" "+ userData.name} <Button onClick={logoUT} >Logout</Button> </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <div className='list'>
